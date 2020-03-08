@@ -1,6 +1,6 @@
 package com.vk;
 
-import com.vk.model.MyExeption;
+import com.vk.exception.MyException;
 
 public class Main {
 
@@ -25,7 +25,7 @@ public class Main {
      * @throws Exception тип сгенерированного исключения, которое может быть "выброшено" методом
      */
 
-    public static void main(String[] args) throws MyExeption {
+    public static void main(String[] args) throws MyException {
         try {
             generateNullPointerException();
             generateArrayIndexOutOfBoundsException();
@@ -34,6 +34,6 @@ public class Main {
         } catch (ArrayIndexOutOfBoundsException e){
             System.out.println("либо я дурак");
         }
-        throw new MyExeption("kva kva");
+        throw new MyException("kva kva");
     }
 }
